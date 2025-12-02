@@ -11,6 +11,6 @@ func readFile(_ filePath: String) -> String {
 }
 
 enum InputType {
-case simple
-case full
+    case simple
+    case full
 }

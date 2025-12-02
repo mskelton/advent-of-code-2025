@@ -12,9 +12,9 @@ func Day3(_ type: InputType) {
 }
 
 private func part1(_ lines: [String]) {
-    
+
 }
 
 private func part2(_ lines: [String]) {
-    
+
 }
