@@ -9,3 +9,8 @@ func readFile(_ filePath: String) -> String {
         return ""
     }
 }
+
+enum InputType {
+case simple
+case full
+}

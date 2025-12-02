@@ -1,15 +1,9 @@
 import Foundation
 
+let type: InputType = .simple
 let days = [
-    Day1
+    Day1,
+    Day2
 ]
 
-//let day = days.first { $0.name == CommandLine.arguments.dropFirst().first }
-//
-//if let day = day {
-//    day.run()
-//} else {
-//    days.last?()
-//}
-
-days.last?()
+days.last?(type)

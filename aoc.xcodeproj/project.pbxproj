@@ -19,6 +19,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1923E2EA2EDF155400644552 /* day2-simple.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "day2-simple.txt"; sourceTree = "<group>"; };
+		1923E2EB2EDF156500644552 /* day2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day2.txt; sourceTree = "<group>"; };
 		192876A82EDDF145004CF2E0 /* aoc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = aoc; sourceTree = BUILT_PRODUCTS_DIR; };
 		192876B32EDDF176004CF2E0 /* day1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day1.txt; sourceTree = "<group>"; };
 		19D577512EDE8CCF00E53688 /* day1-simple.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "day1-simple.txt"; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 			children = (
 				192876B32EDDF176004CF2E0 /* day1.txt */,
 				19D577512EDE8CCF00E53688 /* day1-simple.txt */,
+				1923E2EA2EDF155400644552 /* day2-simple.txt */,
+				1923E2EB2EDF156500644552 /* day2.txt */,
 				192876AA2EDDF145004CF2E0 /* aoc */,
 				192876A92EDDF145004CF2E0 /* Products */,
 			);

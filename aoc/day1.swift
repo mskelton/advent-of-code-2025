@@ -1,20 +1,17 @@
+// Copyright © 2025 Mark Skelton.
+// All Rights Reserved.
+
 import Foundation
 
-func Day1() {
-    let content = readFile("~/dev/aoc/day1-simple.txt")
+func Day1(_ type: InputType) {
+    let content = readFile(type == .simple ? "~/dev/aoc/day1-simple.txt" : "~/dev/aoc/day1.txt")
     let lines = content.components(separatedBy: .newlines)
 
     part1(lines)
     part2(lines)
-
-    let fullContent = readFile("~/dev/aoc/day1.txt")
-    let fullLines = fullContent.components(separatedBy: .newlines)
-
-    part1(fullLines)
-    part2(fullLines)
 }
 
-func part1(_ lines: [String]) {
+private func part1(_ lines: [String]) {
     var dial = 50
     var totalZeros = 0
 
@@ -42,7 +39,7 @@ func part1(_ lines: [String]) {
     print(totalZeros)
 }
 
-func part2(_ lines: [String]) {
+private func part2(_ lines: [String]) {
     var dial = 50
     var totalZeros = 0
 
