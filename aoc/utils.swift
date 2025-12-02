@@ -1,13 +1,11 @@
 import Foundation
 
-func readFile(forResource: String, withExtension: String) -> String {
+func readFile(_ filePath: String) -> String {
     do {
-        let url = Bundle.main.url(forResource: forResource, withExtension: withExtension)
-        let contents = try String(contentsOf: url!, encoding: .utf8)
-        return contents
+        let url = URL(fileURLWithPath: filePath)
+        return try String(contentsOf: url, encoding: .utf8)
     } catch {
         print(error)
         return ""
     }
 }
-
