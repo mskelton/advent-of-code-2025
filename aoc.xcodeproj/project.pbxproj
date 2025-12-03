@@ -24,6 +24,8 @@
 		192876A82EDDF145004CF2E0 /* aoc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = aoc; sourceTree = BUILT_PRODUCTS_DIR; };
 		192876B32EDDF176004CF2E0 /* day1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day1.txt; sourceTree = "<group>"; };
 		19D577512EDE8CCF00E53688 /* day1-simple.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "day1-simple.txt"; sourceTree = "<group>"; };
+		4D9A036F2EDFFB6700C96D90 /* day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
+		4D9A03702EDFFB7000C96D90 /* day3-simple.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "day3-simple.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -51,7 +53,9 @@
 				192876B32EDDF176004CF2E0 /* day1.txt */,
 				19D577512EDE8CCF00E53688 /* day1-simple.txt */,
 				1923E2EA2EDF155400644552 /* day2-simple.txt */,
+				4D9A03702EDFFB7000C96D90 /* day3-simple.txt */,
 				1923E2EB2EDF156500644552 /* day2.txt */,
+				4D9A036F2EDFFB6700C96D90 /* day3.txt */,
 				192876AA2EDDF145004CF2E0 /* aoc */,
 				192876A92EDDF145004CF2E0 /* Products */,
 			);
