@@ -8,21 +8,21 @@ func Day3(_ type: InputType) {
     let lines = content.components(separatedBy: .newlines)
 
     print("Part 1: \(part1(lines))")
-    part2(lines)
+    print("Part 2: \(part2(lines))")
 }
 
 private func part1(_ lines: [String]) -> Int {
     var total = 0
 
     for line in lines {
-        let joltage = parseJoltage(line)
+        let joltage = parseSimpleJoltage(line)
         total += joltage
     }
 
     return total
 }
 
-private func parseJoltage(_ bank: String) -> Int {
+private func parseSimpleJoltage(_ bank: String) -> Int {
     var joltage: (Int, Int) = (0, 0)
 
     for char in bank {
@@ -43,6 +43,43 @@ private func parseJoltage(_ bank: String) -> Int {
     return joltage.0 * 10 + joltage.1
 }
 
-private func part2(_ lines: [String]) {
+private func part2(_ lines: [String]) -> Int {
+    var total = 0
 
+    for line in lines {
+        var bank: [Int] = []
+        for char in line {
+            bank.append(Int(String(char)) ?? 0)
+        }
+        
+        let joltage = parseJoltage(bank)
+        total += joltage
+    }
+
+    return total
+}
+
+private func parseJoltage(_ bank: [Int]) -> Int {
+    var joltage: [Int] = []
+    var localBank = Array(bank)
+    
+    for i in (0..<12).reversed() {
+        let arr = localBank.dropLast(i)
+        let max = arr.max() ?? 0
+        let maxIndex = arr.firstIndex(of: max)
+        
+        joltage.append(max)
+        
+        if maxIndex != nil {
+            localBank.removeSubrange(0...maxIndex!)
+        }
+    }
+    
+    var total = 0
+    
+    for (index, battery) in joltage.reversed().enumerated() {
+        total += battery * Int(pow(10, Double(index)))
+    }
+    
+    return total
 }
