@@ -9,6 +9,16 @@ func Day4() {
     print("Part 2: \(part2(lines))")
 }
 
+extension Array {
+    public subscript(safeIndex index: Int) -> Element? {
+        guard index >= 0, index < endIndex else {
+            return nil
+        }
+
+        return self[index]
+    }
+}
+
 private func part1(_ lines: [String]) -> Int {
     let grid = parseGrid(lines)
     let width = grid[0].count
@@ -16,8 +26,8 @@ private func part1(_ lines: [String]) -> Int {
 
     var total = 0
 
-    for i in 1..<(height - 1) {
-        for j in 1..<(width - 1) {
+    for i in 0..<height {
+        for j in 0..<width {
             let valid = grid[i][j] == "@" && isValid(grid: grid, x: i, y: j)
 
             if valid {
@@ -35,7 +45,7 @@ private func isValid(grid: [[String]], x: Int, y: Int) -> Bool {
 
     for i in -1...1 {
         for j in -1...1 {
-            if grid[x + i][y + j] == "@" {
+            if grid[safeIndex: x + i]?[safeIndex: y + j] == "@" {
                 total += 1
             }
         }
@@ -56,8 +66,8 @@ private func part2(_ lines: [String]) -> Int {
         total += batch
         batch = 0
 
-        for i in 1..<(height - 1) {
-            for j in 1..<(width - 1) {
+        for i in 0..<height {
+            for j in 0..<width {
                 let valid = grid[i][j] == "@" && isValid(grid: grid, x: i, y: j)
 
                 if valid {
@@ -79,20 +89,14 @@ private func parseGrid(_ lines: [String]) -> [[String]] {
             continue
         }
 
-        var arr: [String] = ["."]
+        var arr: [String] = []
 
         for char in line {
             arr.append(String(char))
         }
 
-        arr.append(".")
         result.append(arr)
     }
-
-    let count = result[0].count
-
-    result.insert((0..<count).map { i in "." }, at: 0)
-    result.append((0..<count).map { i in "." })
 
     return result
 }
