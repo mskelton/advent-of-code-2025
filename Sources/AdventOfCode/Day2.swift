@@ -1,6 +1,3 @@
-// Copyright © 2025 Mark Skelton.
-// All Rights Reserved.
-
 import Foundation
 
 func Day2() {
