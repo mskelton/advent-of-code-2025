@@ -3,7 +3,8 @@
 
 import Foundation
 
-func Day1(_ type: InputType) {
+func Day1() {
+    let type: InputType = .simple
     let content = readFile(type == .simple ? "~/dev/aoc/day1-simple.txt" : "~/dev/aoc/day1.txt")
     let lines = content.components(separatedBy: .newlines)
 

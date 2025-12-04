@@ -3,7 +3,8 @@
 
 import Foundation
 
-func Day2(_ type: InputType) {
+func Day2() {
+    let type: InputType = .simple
     let content = readFile(type == .simple ? "~/dev/aoc/day2-simple.txt" : "~/dev/aoc/day2.txt")
         .trimmingCharacters(in: .whitespacesAndNewlines)
 
