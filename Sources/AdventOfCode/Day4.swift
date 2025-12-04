@@ -5,9 +5,7 @@ import Foundation
 
 func Day4() {
     let type: InputType = .full
-    let content = readFile(
-        type == .simple ? "~/dev/aoc/day4-simple.txt" : "~/dev/aoc/day4.txt"
-    )
+    let content = readFile(type: type, name: "day4")
     let lines = content.components(separatedBy: .newlines)
 
     print("Part 1: \(part1(lines))")
@@ -71,7 +69,7 @@ private func part2(_ lines: [String]) -> Int {
                 }
             }
         }
-    } while (batch > 0)
+    } while batch > 0
 
     return total
 }

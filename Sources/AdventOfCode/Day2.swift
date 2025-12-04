@@ -5,7 +5,7 @@ import Foundation
 
 func Day2() {
     let type: InputType = .simple
-    let content = readFile(type == .simple ? "~/dev/aoc/day2-simple.txt" : "~/dev/aoc/day2.txt")
+    let content = readFile(type: type, name: "day2")
         .trimmingCharacters(in: .whitespacesAndNewlines)
 
     let ids = parseIds(content)

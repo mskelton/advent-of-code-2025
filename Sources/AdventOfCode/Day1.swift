@@ -5,7 +5,7 @@ import Foundation
 
 func Day1() {
     let type: InputType = .simple
-    let content = readFile(type == .simple ? "~/dev/aoc/day1-simple.txt" : "~/dev/aoc/day1.txt")
+    let content = readFile(type: type, name: "day1")
     let lines = content.components(separatedBy: .newlines)
 
     part1(lines)

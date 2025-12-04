@@ -5,7 +5,7 @@ import Foundation
 
 func Day3() {
     let type: InputType = .simple
-    let content = readFile(type == .simple ? "~/dev/aoc/day3-simple.txt" : "~/dev/aoc/day3.txt")
+    let content = readFile(type: type, name: "day3")
     let lines = content.components(separatedBy: .newlines)
 
     print("Part 1: \(part1(lines))")
@@ -52,7 +52,7 @@ private func part2(_ lines: [String]) -> Int {
         for char in line {
             bank.append(Int(String(char)) ?? 0)
         }
-        
+
         let joltage = parseJoltage(bank)
         total += joltage
     }
@@ -63,24 +63,24 @@ private func part2(_ lines: [String]) -> Int {
 private func parseJoltage(_ bank: [Int]) -> Int {
     var joltage: [Int] = []
     var localBank = Array(bank)
-    
+
     for i in (0..<12).reversed() {
         let arr = localBank.dropLast(i)
         let max = arr.max() ?? 0
         let maxIndex = arr.firstIndex(of: max)
-        
+
         joltage.append(max)
-        
+
         if maxIndex != nil {
             localBank.removeSubrange(0...maxIndex!)
         }
     }
-    
+
     var total = 0
-    
+
     for (index, battery) in joltage.reversed().enumerated() {
         total += battery * Int(pow(10, Double(index)))
     }
-    
+
     return total
 }
