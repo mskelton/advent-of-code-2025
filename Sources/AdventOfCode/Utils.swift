@@ -17,3 +17,13 @@ enum InputType {
     case simple
     case full
 }
+
+extension String {
+    func char(at offset: Int) -> String? {
+        guard offset >= 0 && offset < self.count else {
+            return nil
+        }
+
+        return String(self[self.index(self.startIndex, offsetBy: offset)])
+    }
+}
