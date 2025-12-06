@@ -7,6 +7,13 @@ func main() {
         Day3,
         Day4,
         Day5,
+        Day6,
+        // Day7,
+        // Day8,
+        // Day9,
+        // Day10,
+        // Day11,
+        // Day12,
     ]
 
     days.last?()
