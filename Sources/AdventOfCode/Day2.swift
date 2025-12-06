@@ -1,7 +1,6 @@
 import Foundation
 
-func Day2() {
-    let type: InputType = .simple
+func Day2(_ type: InputType) {
     let content = readFile(type: type, name: "day2")
         .trimmingCharacters(in: .whitespacesAndNewlines)
 

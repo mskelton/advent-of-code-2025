@@ -1,7 +1,10 @@
 import Foundation
 
 func main() {
-    let days = [
+    let args = CommandLine.arguments
+    let type: InputType = args.contains("full") ? .full : .simple
+
+    let days: [(InputType) -> Void] = [
         Day1,
         Day2,
         Day3,
@@ -16,7 +19,7 @@ func main() {
         // Day12,
     ]
 
-    days.last?()
+    days.last?(type)
 }
 
 main()

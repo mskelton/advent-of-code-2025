@@ -1,7 +1,6 @@
 import Foundation
 
-func Day9() {
-  let type: InputType = .simple
+func Day9(_ type: InputType) {
   let content = readFile(type: type, name: "day9")
   let lines = content.components(separatedBy: .newlines)
 
